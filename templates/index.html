@@ -10,7 +10,7 @@
         <title>Movies</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{url_for('static'), 'styles/index.css'}}">
+        <link rel="stylesheet" href="">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -18,7 +18,12 @@
         <![endif]-->
         <h1>Movie Api List</h1>
         <p>This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
-        
-        <script src="" async defer></script>
+        <p>{{message}}</p>
+
+        <ol>
+            {% for item in trending_list %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ol>
     </body>
 </html>
